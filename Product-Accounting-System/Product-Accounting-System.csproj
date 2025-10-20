@@ -67,8 +67,29 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ProductManagerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductSearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ProductManagerPage.xaml.cs">
+      <DependentUpon>ProductManagerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductSearchPage.xaml.cs">
+      <DependentUpon>ProductSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductStatsPage.xaml.cs">
+      <DependentUpon>ProductStatsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

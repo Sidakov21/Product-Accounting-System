@@ -1,5 +1,4 @@
-﻿using Product_Accounting_System.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Product_Accounting_System
+namespace Product_Accounting_System.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ProductStatsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductStatsPage : Page
     {
-        public MainWindow()
+        public ProductStatsPage()
         {
             InitializeComponent();
         }

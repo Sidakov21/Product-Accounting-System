@@ -7,10 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="750">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
+        <Frame x:Name="MainFrame" Source="Pages/ProductManagerPage.xaml">
+            
+        </Frame>
     </Grid>
 </Window>
