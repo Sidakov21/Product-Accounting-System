@@ -23,8 +23,6 @@ namespace Product_Accounting_System
     {
         public MainWindow()
         {
-            var productManagerPage = new ProductManagerPage();
-            MainFrame.CurrentSource = productManagerPage;
             InitializeComponent();
         }
     }
