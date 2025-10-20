@@ -24,5 +24,30 @@ namespace Product_Accounting_System.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProductsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
