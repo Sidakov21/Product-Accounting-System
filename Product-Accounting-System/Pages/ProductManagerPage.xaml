@@ -7,8 +7,45 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProductManagerPage">
+    <Grid Background="White" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-    <Grid>
-        
+        <!-- Заголовок и кнопки управления -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Управление товарами" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Separator Width="20" Visibility="Hidden"/>
+            <Button x:Name="btnAdd" Content="Добавить" Click="BtnAdd_Click" Width="80" Margin="5,0"/>
+            <Button x:Name="btnEdit" Content="Редактировать" Click="BtnEdit_Click" Width="100" Margin="5,0"/>
+            <Button x:Name="btnDelete" Content="Удалить" Click="BtnDelete_Click" Width="80" Margin="5,0"/>
+            <Button x:Name="btnRefresh" Content="Обновить" Click="BtnRefresh_Click" Width="80" Margin="5,0"/>
+        </StackPanel>
+
+        <!-- Таблица товаров -->
+        <DataGrid x:Name="productsGrid" 
+                  Grid.Row="1" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False" 
+                  SelectionMode="Single"
+                  IsReadOnly="True"
+                  SelectionChanged="ProductsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="200"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="100">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Text" Value="{Binding Price, StringFormat={}{0}₽}"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="80"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding Category.Name}" Width="150"/>
+                <DataGridTextColumn Header="ID категории" Binding="{Binding CategoryId}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
