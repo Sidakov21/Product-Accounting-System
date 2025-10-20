@@ -6,8 +6,9 @@ create table Category(
 create table Product(
 	Id Int Primary key identity(1,1),
 	Name nvarchar(50) not null,
-	CategoryId int,
 	Price Int check (Price > 0) not null,
 	Quantity Int Default 0 check (Quantity >= 0) not null,
-	foreign key (Quantity) references Category(Id)
+	
+	CategoryId int,
+	foreign key (CategoryID) references Category(Id)
 );
