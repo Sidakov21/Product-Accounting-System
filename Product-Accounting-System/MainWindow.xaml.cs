@@ -1,4 +1,5 @@
-﻿using Product_Accounting_System.Pages;
+﻿using Database;
+using Product_Accounting_System.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
