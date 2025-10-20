@@ -5,10 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Product_Accounting_System"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="750">
+        Title="Менеджер продуктов" Height="450" Width="750">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource MenuButton}" x:Name="Button_ProductManager" Grid.Column="0">Управление продуктами</Button>
+            <Button Style="{StaticResource MenuButton}" x:Name="Button_ProductSearch" Grid.Column="1">Поиск продуктов</Button>
+            <Button Style="{StaticResource MenuButton}" x:Name="Button_ProductStats" Grid.Column="2">Статистика продуктов</Button>
+        </Grid>
         <Frame x:Name="MainFrame" Source="Pages/ProductManagerPage.xaml">
-            
+
         </Frame>
     </Grid>
 </Window>
